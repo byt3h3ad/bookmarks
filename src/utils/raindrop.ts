@@ -8,7 +8,7 @@ const options = {
     Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
   },
   next: {
-    revalidate: 60 * 60,
+    revalidate: 60 * 60 * 24 * 2,
   },
 };
 
@@ -20,7 +20,7 @@ export const getBookmarkItems = cache(async (id = 0, pageIndex = 0) => {
       `${RAINDROP_API_URL}/raindrops/${id}?` +
         new URLSearchParams({
           page: pageIndex.toString(),
-          perpage: "50",
+          perpage: "10",
         }),
       options
     );
