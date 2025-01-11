@@ -3,5 +3,5 @@
 import { getBookmarkItems } from "@/utils/raindrop";
 
 export const getBookmarkItemsByPageIndex = async (pageIndex: number) => {
-  return await getBookmarkItems(pageIndex);
+  return await getBookmarkItems(0, pageIndex);
 };

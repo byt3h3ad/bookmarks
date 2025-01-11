@@ -16,14 +16,14 @@ export const BookmarkCard: React.FC<Props> = ({ bookmark }) => {
   return (
     <a
       href={bookmark.link}
-      className="p-4 rounded-xl transition-colors bg-inherit duration-300 hover:bg-zinc-100"
+      className="p-4 rounded-xl transition-colors bg-inherit duration-300 hover:bg-zinc-100 space-y-2 text-balance"
       target="_blank"
       rel="noopener noreferrer"
     >
       <h2 className="line-clamp-4 leading-snug">{bookmark.title}</h2>
-      <div className="flex justify-between items-center my-2 line-clamp-4 gap-1 text-sm text-zinc-500">
+      <div className="flex justify-between items-center line-clamp-4 gap-1 text-sm text-zinc-500">
         <span>[{bookmark.domain}]</span>
-        <span>{formatDate(bookmark.created)}</span>
+        <span className="text-right">{formatDate(bookmark.created)}</span>
       </div>
       <span className="line-clamp-6 text-sm">{bookmark.excerpt}</span>
     </a>
