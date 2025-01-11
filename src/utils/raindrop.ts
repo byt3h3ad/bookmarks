@@ -8,7 +8,7 @@ const options = {
     Authorization: `Bearer ${process.env.RAINDROP_ACCESS_TOKEN}`,
   },
   next: {
-    revalidate: 60 * 60 * 24 * 2,
+    revalidate: 60 * 60,
   },
 };
 

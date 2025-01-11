@@ -2,10 +2,10 @@
 
 import { getBookmarkItemsByPageIndex } from "@/app/actions";
 import { Data } from "@/lib/types";
-import React, { useCallback, useEffect, useState } from "react";
-import { Button } from "./ui/button";
 import { ArrowDownIcon } from "lucide-react";
+import React, { useCallback, useEffect, useState } from "react";
 import { BookmarkCard } from "./bookmark-card";
+import { Button } from "./ui/button";
 
 interface Props {
   initialData: Data | null;

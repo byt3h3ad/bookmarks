@@ -1,15 +1,17 @@
 import { BookmarkList } from "@/components/bookmark-list";
 import { Loader } from "@/components/loader";
+import { Data } from "@/lib/types";
 import { getBookmarkItems } from "@/utils/raindrop";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 
 export default async function Home() {
-  const data = await getBookmarkItems();
+  const data: Data | null = await getBookmarkItems();
+  const { count } = data ? data : { count: "" };
   return (
     <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-2xl">bookmarks</h1>
+      <h1 className="text-2xl">{count} bookmarks</h1>
       <main className="font-[family-name:var(--font-geist-mono)] max-w-2xl">
         <Suspense fallback={<Loader />}>
           <BookmarkList initialData={data} />
