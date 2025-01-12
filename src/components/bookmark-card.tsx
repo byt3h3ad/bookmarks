@@ -11,12 +11,12 @@ export const BookmarkCard: React.FC<Props> = ({ bookmark }) => {
   if (isTweetLink(bookmark.link)) {
     const match = bookmark.link.match(/\/status\/(\d+)/) ?? [];
     const tweetId = match[1];
-    return <TweetCard id={tweetId} />;
+    return <TweetCard id={tweetId} createdAt={bookmark.created} />;
   }
   return (
     <a
       href={bookmark.link}
-      className="p-4 rounded-xl transition-colors bg-inherit duration-300 hover:bg-zinc-100 space-y-2 text-balance"
+      className="p-4 rounded-xl transition-colors bg-inherit border border-zinc-50 duration-300 hover:bg-zinc-100 space-y-2 text-balance"
       target="_blank"
       rel="noopener noreferrer"
     >
