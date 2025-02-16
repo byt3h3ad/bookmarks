@@ -37,7 +37,6 @@ export type formData = z.infer<typeof formSchema>;
 
 interface Props {
   className?: string;
-  setFormOpen?: (open: boolean) => void;
 }
 
 const bookmarks = ["Others", "Hacker News", "bytes"];
