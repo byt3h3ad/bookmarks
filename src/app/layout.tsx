@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "bookmarks - adhiraj",
   description: "what i read.",
   authors: [{ name: "Adhiraj Dutta", url: "https://adhiraj.tech" }],
+  metadataBase: new URL("https://bookmarks.adhiraj.tech"),
   robots: {
     index: true,
     follow: true,
