@@ -67,6 +67,7 @@ export const SubmitBookmarkForm: React.FC<Props> = ({ className }) => {
           </span>
         ),
       });
+      form.reset();
     } catch (error) {
       toast.error(error as string);
     }

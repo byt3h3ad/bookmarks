@@ -47,7 +47,6 @@ export async function submitBookmark(formData: formData) {
     );
 
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     console.info(error);
