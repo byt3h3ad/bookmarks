@@ -1,5 +1,6 @@
 import { BookmarkList } from "@/components/bookmark-list";
 import { Loader } from "@/components/loader";
+import { ModeToggle } from "@/components/theme-toggle";
 import { Data } from "@/lib/types";
 import { getBookmarkItems } from "@/utils/raindrop";
 import Image from "next/image";
@@ -11,7 +12,7 @@ export default async function Home() {
   const { count } = data ? data : { count: "" };
   return (
     <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-2xl">{count} bookmarks</h1>
+      <ModeToggle count={count} />
       <main className="font-[family-name:var(--font-geist-mono)] max-w-2xl">
         <Suspense fallback={<Loader />}>
           <BookmarkList initialData={data} />

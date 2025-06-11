@@ -48,7 +48,7 @@ export const BookmarkList: React.FC<Props> = ({ initialData }) => {
             <>
               {isLoading ? (
                 <div
-                  className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent text-black"
+                  className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent text-black dark:text-white"
                   role="status"
                   aria-label="loading"
                 >
@@ -59,10 +59,10 @@ export const BookmarkList: React.FC<Props> = ({ initialData }) => {
                   variant="outline"
                   onClick={loadMore}
                   disabled={isLoading}
-                  className="w-full justify-center bg-white"
+                  className="w-full justify-center bg-white dark:bg-black"
                 >
                   Load more
-                  <ArrowDownIcon size={16} />
+                  <ArrowDownIcon size={16} className="dark:text-white" />
                 </Button>
               )}
             </>

@@ -16,7 +16,7 @@ export const BookmarkCard: React.FC<Props> = ({ bookmark }) => {
   return (
     <a
       href={bookmark.link}
-      className="p-4 rounded-xl transition-colors bg-inherit border border-zinc-50 duration-300 hover:bg-zinc-100 space-y-2"
+      className="p-4 rounded-xl transition-colors bg-inherit border border-zinc-50 dark:border-zinc-900 duration-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 space-y-2"
       target="_blank"
       rel="noopener noreferrer"
     >
