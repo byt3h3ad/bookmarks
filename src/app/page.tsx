@@ -23,7 +23,7 @@ export default async function Home() {
           href="https://adhiraj.tech/"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline underline-offset-4 text-blue-700 visited:text-zinc-700 inline-flex items-center gap-x-2"
+          className="underline underline-offset-4 text-blue-700 dark:text-blue-400 visited:text-zinc-700 visited:dark:text-zinc-400 inline-flex items-center gap-x-2"
         >
           <Image
             src="/bytehead.jpg"
