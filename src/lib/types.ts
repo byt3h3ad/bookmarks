@@ -14,3 +14,11 @@ export interface Data {
   count: number;
   collectionId: number;
 }
+
+export const config = {
+  siteURL: "https://bookmarks.adhiraj.tech",
+  author: {
+    name: "Adhiraj",
+    link: "https://adhiraj.tech",
+  },
+};
